@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+<body>
+    <div style="text-align: right; padding: 10px;">
+        {% if  is_auth %}
+            <a href="/logout">Выход</a>
+        {% else %}
+            <a href="{{ url_for('auth') }}">Authorize</a>
+        {% endif %}
+
+    </div>
+    <h1>Status</h1>
+    <p>Active: {{is_active}}</p>
+    <p>Authorize: {{is_auth}}</p>
+<!--    {% if  is_active %}-->
+<!--        <a href="{{ url_for('change_answer') }}">change_answer</a>-->
+
+<!--    {% endif %}-->
+
+    <a href="/admin"><h1>Control</h1>
+    <p></p>
+</body>
+</html>

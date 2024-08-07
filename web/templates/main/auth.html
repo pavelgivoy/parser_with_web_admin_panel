@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram API Configuration</title>
+</head>
+<body>
+    <h1>Telegram API Configuration</h1>
+    <form method="post" action="{{ url_for('send_code') }}">
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone"  value="{{ phone}}"  required><br><br>
+
+        <input type="submit" value="Отправить код">
+    </form>
+    <br>
+    <form method="post" action="{{ url_for('send_key') }}">
+        <label for="code">Код:</label>
+        <input type="text" id="code" name="auth_code" required><br><br>
+        <input type="submit" value="Авторизация">
+    </form>
+</body>
+</html>

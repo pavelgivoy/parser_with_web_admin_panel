@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование ответов</title>
+</head>
+<body>
+    <div style="text-align: left; padding: 10px;">
+
+        <a href="{{ url_for('index') }}">Main Page</a>
+    </div>
+    <h1>Редактирование ответов</h1>
+    <form method="POST" action="">
+
+        <label for="response_text_with_messages">Ответ клиенту:</label><br>
+        <textarea id="response_text_with_messages" name="answer" rows="10" cols="200">{{ answer }}</textarea><br><br>
+        <input type="submit" value="Сохранить">
+    </form>
+</body>
+</html>
